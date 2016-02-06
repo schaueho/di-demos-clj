@@ -18,12 +18,14 @@
 
   component/Lifecycle
   (start [streamer]
-    (let [connection (connect (:connection streamer) streamer)]
-      (assoc streamer :connection connection)))
+    (println "BlueStreamer starting")
+    (connect (:connection streamer) streamer)
+    (assoc streamer :status :connected))
   (stop [streamer]
-    (->> (disconnect (:connection streamer) streamer)
-         (assoc streamer :connection))))
+    (println "BlueStreamer stopping")
+    (disconnect (:connection streamer) streamer)
+    (->> (assoc streamer :status :disconnected)
+         (dissoc :connection))))
 
 (defn new-blue-streamer [config]
-  (->BlueStreamer (:connection config) 
-                  (:default-volume config)))
+  (->BlueStreamer nil (:default-volume config)))

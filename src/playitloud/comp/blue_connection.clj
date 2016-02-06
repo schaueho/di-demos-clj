@@ -5,9 +5,10 @@
   RemoteDataConnectionProtocol
   
   (connect [connection source]
-    (println "Connecting to " (:name options))
-    (assoc connection :options options)
-    (assoc connection :status :connected))
+    (let [options (:options connection)]
+      (println "Connecting to " (:name options))
+      (assoc connection :options options)
+      (assoc connection :status :connected)))
 
   (disconnect [connection source]
     (println "Disconnecting from " (get-in connection [:options :name]))

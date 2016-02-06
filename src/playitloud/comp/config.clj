@@ -20,9 +20,9 @@
   ([config]
    (component/system-map
     :connection (blueconn/new-connection config)
-    :output (component/using
-             (streamer/new-blue-streamer config)
-             [:connection])
+    :output-device (component/using
+                    (streamer/new-blue-streamer config)
+                    [:connection])
     :player (component/using
-             (player/new-player config)
-             [:output]))))
+             (player/new-player)
+             [:output-device]))))

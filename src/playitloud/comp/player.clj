@@ -4,7 +4,13 @@
             [playitloud.musiccoll :as mc]))
 
 (defrecord Player [output-device]
-  component/Lifecycle)
+  component/Lifecycle
+  (start [player]
+    (println "Player started with output-device " (:output-device player))
+    player)
+  (stop [player]
+    (println "Player stopped")
+    player))
 
 (defn play [player randomize]
   (let [songs (mc/get-songs)
@@ -13,5 +19,5 @@
            (output/blare (:output-device player) song))
          songs)))
 
-(defn new-player [config]
+(defn new-player []
   (->Player nil))
