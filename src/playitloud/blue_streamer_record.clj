@@ -1,4 +1,4 @@
-(ns playitloud.speaker-record
+(ns playitloud.blue-streamer-record
   (:require [playitloud.output-device :as output :refer :all]))
 
 (defn- stream [connection sound]
