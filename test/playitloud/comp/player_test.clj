@@ -3,7 +3,7 @@
             [com.stuartsierra.component :as component]
             [playitloud.comp.config :refer [make-player-system]]
             [playitloud.comp.player :refer :all]
-            [playitloud.output-device :as output :refer :all]
+            [playitloud.comp.output-device :as output :refer :all]
             [playitloud.comp.streamer :refer :all]
             [playitloud.comp.blue-connection :refer :all]))
 

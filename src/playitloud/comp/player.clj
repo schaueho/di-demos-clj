@@ -1,6 +1,6 @@
 (ns playitloud.comp.player
   (:require [com.stuartsierra.component :as component]
-            [playitloud.output-device :as output]
+            [playitloud.comp.output-device :as output]
             [playitloud.musiccoll :as mc]))
 
 (defrecord Player [output-device]

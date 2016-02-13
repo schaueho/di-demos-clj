@@ -1,7 +1,7 @@
-(ns playitloud.proto-player-test
-  (:require [playitloud.proto-player :refer :all]
+(ns playitloud.proto.player-test
+  (:require [playitloud.proto.player :refer :all]
             [midje.sweet :refer :all]
-            [playitloud.output-device :as output :refer :all]))
+            [playitloud.proto.output-device :as output :refer :all]))
 
 (def test-output-device
   (let [volume 1]

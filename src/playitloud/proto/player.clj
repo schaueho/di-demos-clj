@@ -1,6 +1,6 @@
 ; ---------------------------------------------------
-(ns playitloud.proto-player
-  (:require [playitloud.output-device :as output]
+(ns playitloud.proto.player
+  (:require [playitloud.proto.output-device :as output]
             [playitloud.musiccoll :as mc]))
 
 (defn proto-play [output-device randomize]

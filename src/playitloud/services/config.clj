@@ -1,6 +1,4 @@
-(ns playitloud.services)
-;  (:require [playitloud.speaker]
-;  	    [playitloud.musiccoll]))
+(ns playitloud.services.config)
 
 (def ^:dynamic *services*
   {:blare playitloud.speaker/blare

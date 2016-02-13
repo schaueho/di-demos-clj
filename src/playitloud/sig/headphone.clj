@@ -1,6 +1,6 @@
-(ns playitloud.headphone-sig
+(ns playitloud.sig.headphone
   (:require [de.find-method.funsig :refer [defimpl]]
-            [playitloud.output-sig :refer [blare]]))
+            [playitloud.sig.output-device :refer [blare]]))
 
 (defimpl blare [sound]
   (let [result (str "Headphone plays " sound)]

@@ -1,5 +1,5 @@
-(ns playitloud.speaker-record
-  (:require [playitloud.output-device :as output :refer :all]))
+(ns playitloud.comp.speaker
+  (:require [playitloud.comp.output-device :as output :refer :all]))
 
 (defrecord Speaker [volume]
     OutputDevice

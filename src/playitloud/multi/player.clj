@@ -1,8 +1,8 @@
-(ns playitloud.multi-player
-  (:require [playitloud.output-multi :refer [blare]]
+(ns playitloud.multi.player
+  (:require [playitloud.multi.output-device :refer [blare]]
             [playitloud.musiccoll :as mc]))
 
-(defn multi-play [output-device randomize]
+(defn play [output-device randomize]
   (let [songs (mc/get-songs)
         songs (if randomize (shuffle songs) songs)]
     (map (fn [song]

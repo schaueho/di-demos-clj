@@ -1,6 +1,6 @@
 ; -----------------------------------------------------------
-(ns playitloud.ui-player
-  (:require [playitloud.ho-player :as ho :refer [ho-play]]
+(ns playitloud.ho.ui-player
+  (:require [playitloud.ho.player :as ho :refer [play]]
             [playitloud.speaker :as speaker]
             [playitloud.headphone :as headphone]
             [playitloud.blue-streamer :as streamer]
@@ -9,7 +9,7 @@
 (defn play-pressed [speaker randomize]
   (println "User pressed play")
   (condp = speaker
-    :speaker   (ho-play speaker/blare get-songs randomize)
-    :headphone (ho-play headphone/blare get-songs randomize)
-    :stream    (ho-play streamer/blare get-songs randomize)))
+    :speaker   (play speaker/blare get-songs randomize)
+    :headphone (play headphone/blare get-songs randomize)
+    :stream    (play streamer/blare get-songs randomize)))
 

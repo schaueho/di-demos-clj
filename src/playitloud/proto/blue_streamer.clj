@@ -1,5 +1,5 @@
-(ns playitloud.speaker-record
-  (:require [playitloud.output-device :as output :refer :all]))
+(ns playitloud.proto.blue-streamer
+  (:require [playitloud.proto.output-device :as output :refer :all]))
 
 (defn- stream [connection sound]
   (println (str "Streaming sound " sound)))

@@ -1,4 +1,4 @@
-(ns playitloud.output-device)
+(ns playitloud.proto.output-device)
 
 (defprotocol OutputDevice
   (blare [device sound])

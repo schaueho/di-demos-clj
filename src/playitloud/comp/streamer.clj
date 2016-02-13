@@ -1,6 +1,6 @@
 (ns playitloud.comp.streamer
   (:require [com.stuartsierra.component :as component]
-            [playitloud.output-device :as output :refer :all]
+            [playitloud.comp.output-device :as output :refer :all]
             [playitloud.comp.remote-connection :as remote :refer 
              [connect disconnect transmit send-command]]))
 

@@ -1,8 +1,8 @@
-(ns playitloud.sig-player
-  (:require [playitloud.output-sig :refer [blare]]
+(ns playitloud.sig.player
+  (:require [playitloud.sig.output-device :refer [blare]]
             [playitloud.musiccoll :as mc :refer [get-songs]]))
 
-(defn sig-play [randomize]
+(defn play [randomize]
   (let [songs (get-songs)
         songs (if randomize (shuffle songs) songs)]
     (map (fn [song]
