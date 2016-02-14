@@ -8,7 +8,7 @@
            (blarefn song))
          songs)))
 
-(defn clos-play
+(defn make-playfn
   "Returns a function that will play all songs"
   [blarefn songgetterfn]
   

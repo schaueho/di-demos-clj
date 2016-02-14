@@ -4,7 +4,7 @@
             [playitloud.musiccoll :as mc]))
 
 (defn create-player [streamer]
-;  (throw (Exception. "No such player")))
+  (println "Will use streamer " streamer)
   {:streamer streamer})
 
 (defstate player :start (create-player streamer))

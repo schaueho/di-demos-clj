@@ -1,5 +1,6 @@
 (ns playitloud.comp.blue-connection
-  (:require [playitloud.comp.remote-connection :refer [RemoteDataConnectionProtocol]]))
+  (:require [playitloud.comp.remote-connection
+             :refer [RemoteDataConnectionProtocol]]))
 
 (defrecord BlauZahnConnection [options]
   RemoteDataConnectionProtocol
@@ -11,7 +12,8 @@
       (assoc connection :status :connected)))
 
   (disconnect [connection source]
-    (println "Disconnecting from " (get-in connection [:options :name]))
+    (println "Disconnecting from "
+             (get-in connection [:options :name]))
     (assoc connection :status :disconnected))
 
   (transmit [connection data]

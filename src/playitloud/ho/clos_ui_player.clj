@@ -1,8 +1,7 @@
 ; -----------------------------------------------------------
 (ns playitloud.ho.clos-ui-player
-  (:require [playitloud.ho.play-config :refer [select-playfn]]
-            [playitloud.musiccoll :refer [get-songs]]))
+  (:require [playitloud.ho.play-config :refer [select-playfn]]))
 
-(defn play-pressed [speaker randomize]
-  (let [playfn (select-playfn speaker)]
+(defn play-pressed [output randomize]
+  (let [playfn (select-playfn output)]
     (playfn randomize)))

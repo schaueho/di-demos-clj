@@ -3,7 +3,8 @@
             [playitloud.mount.connection :refer [conn transmit send-command]]))
 
 (defn create-streamer [connection]
-   {:connection connection})
+  (println "Connecting to connection ..." connection)
+  {:connection connection})
 
 (defstate streamer :start (create-streamer conn))
 
