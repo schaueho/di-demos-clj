@@ -1,6 +1,6 @@
 # playitloud
 
-Demo code for a presentation on [dependency inversion / management in Clojure](www.find-method.de/resources/docs/dependency-management-clojured/).
+Demo code for a presentation on [dependency inversion / management in Clojure](http://www.find-method.de/resources/docs/dependency-management-clojured/).
 
 ## Usage
 
